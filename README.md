@@ -14,10 +14,10 @@ This service exposes REST APIs for authentication, posts, comments, replies, and
    npm install
    ```
 2. Copy `env.example` to `.env` and fill in the variables (database connection string, JWT secret, optional Cloudinary credentials).
-3. Generate the Prisma client and run migrations if needed:
+3. Initialize the database the first time you set up the project:
    ```bash
-   npx prisma generate
-   # npx prisma migrate deploy   # when migrations are present
+   npx prisma generate          # builds the Prisma client
+   npx prisma migrate deploy    # applies the schema to your PostgreSQL database
    ```
 
 ## Available Scripts
